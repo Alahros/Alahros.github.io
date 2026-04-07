@@ -1,58 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alejandro | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alejandro | Portfolio</title>
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #ac6903;
-    color: #ffffff;
-}
-
-header {
-    text-align: center;
-    padding: 60px 20px;
-    background: #b92222;
-}
-
-h1 { font-size: 3rem; }
-
-section {
-    padding: 40px 20px;
-    max-width: 900px;
-    margin: auto;
-}
-
-.card {
-    background: #1e1e1e;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-button {
-    margin: 10px;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.lang-btn {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-}
-</style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="lang-btn">
-    <button onclick="setLang('en')">EN</button>
-    <button onclick="setLang('es')">ES</button>
+<div class="lang-switch">
+    <img src="assets/lang/EnButtons3.png" onclick="setLang('en')" id="btn-en">
+    <img src="assets/lang/EsButtons3.png" onclick="setLang('es')" id="btn-es">
 </div>
 
 <header>
@@ -63,15 +24,26 @@ button {
 <section>
     <h2 id="projectsTitle"></h2>
 
-    <div class="card">
-        <h3 id="proj1Title"></h3>
-        <p id="proj1Desc"></p>
+    
+    <div class="card project">
+        <div class="project-text">
+            <h3 id="proj1Title"></h3>
+            <p id="proj1Desc"></p>
+        </div>
+
+        <img src="assets/gifs/project1.gif" class="project-gif">
     </div>
 
-    <div class="card">
-        <h3 id="proj2Title"></h3>
-        <p id="proj2Desc"></p>
+    
+    <div class="card project">
+        <div class="project-text">
+            <h3 id="proj2Title"></h3>
+            <p id="proj2Desc"></p>
+        </div>
+
+        <img src="assets/gifs/project2.gif" class="project-gif">
     </div>
+
 </section>
 
 <section>
@@ -91,26 +63,26 @@ button {
 <script>
 const content = {
     en: {
-        title: "Hi, I'm Alejandro",
+        title: "Alejandro Ahumada",
         subtitle: "2D Artist | Pixel Art | Unity Game Developer",
         projectsTitle: "Projects",
-        proj1Title: "Game Jam Project",
-        proj1Desc: "2D game created for LAGS Game Jam. I worked as main 2D artist and animator.",
-        proj2Title: "Pixel Animation",
-        proj2Desc: "Animation inspired by Jujutsu Kaisen recreated in pixel art.",
+        proj1Title: "Mi Esmeralda",
+        proj1Desc: "2.5D videogame developed for LAGS Game Jam, where I worked as the main 2D artist, creating characters and props and animating them, with a strong focus on visual aesthetics.",
+        proj2Title: "Asteroid Energy",
+        proj2Desc: "Videogame developed for Limited Capacity Game Jam, where I worked as the main 2D artist, creating characters and props, animating them, and also handling character movement programming and Animator setup.",
         aboutTitle: "About Me",
         aboutText: "I'm a 2D artist and game developer focused on pixel art and animation.",
         contactTitle: "Contact"
     },
 
     es: {
-        title: "Hola, soy Alejandro",
+        title: "Alejandro Ahumada",
         subtitle: "Artista 2D | Pixel Art | Desarrollador en Unity",
         projectsTitle: "Proyectos",
-        proj1Title: "Proyecto Game Jam",
-        proj1Desc: "Juego 2D creado para LAGS Game Jam. Fui el artista 2D principal y animador.",
-        proj2Title: "Animación Pixel",
-        proj2Desc: "Animación inspirada en Jujutsu Kaisen recreada en pixel art.",
+        proj1Title: "Mi Esmeralda",
+        proj1Desc: "Juego desarrollado para la LAGS Game Jam, donde fui artista principal de personajes 2D y props, enfocado en la estética y animación.",
+        proj2Title: "Asteroid Energy",
+        proj2Desc: "Videojuego desarrollado para la Limited Capacity Game Jam, donde fui artista 2D principal, creando personajes, props, animaciones y trabajando también en programación del personaje y Animator.",
         aboutTitle: "Sobre mí",
         aboutText: "Soy un artista 2D y desarrollador enfocado en pixel art y animación.",
         contactTitle: "Contacto"
@@ -130,7 +102,6 @@ function setLang(lang) {
     document.getElementById("contactTitle").innerText = content[lang].contactTitle;
 }
 
-// default language
 setLang('en');
 </script>
 
