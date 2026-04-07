@@ -8,7 +8,8 @@
 
 .lang-switch img {
     width: 32px;
-    cursor: pointer;
+    height: 32px;
+    display: block;
     image-rendering: pixelated;
     transition: transform 0.1s;
 }
@@ -20,6 +21,16 @@
 
 .lang-switch img:active {
     transform: scale(0.8) translateY(2px);
+}
+
+.lang-switch,
+.lang-switch .lang-btn,
+.lang-switch img {
+  background: transparent;
+  border: none;
+  padding: 0;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 
@@ -34,7 +45,7 @@ header {
     text-align: center;
     padding: 60px 20px;
     background: #b92222;
-    color:#dfc2c2;
+    color:#ffffff;
 }
 
 
@@ -63,9 +74,16 @@ section {
     color : #000000;    
 }
 
-button {
-    background: #b92222;
+.lang-btn {
+    all: unset;
+    display: inline-block;
     cursor: pointer;
+}
+
+.lang-btn:focus,
+.lang-btn:active {
+    outline: none;
+    background: transparent;
 }
 
 .project {
@@ -82,4 +100,20 @@ button {
 .project-gif {
     width: 110px;
     image-rendering: pixelated;
+}
+
+.cv-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #b92222;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.cv-button:hover {
+    background: #ff3b3b;
+    transform: scale(1.05);
 }

@@ -13,17 +13,22 @@
 
 <div class="lang-switch">
     <button type="button" onclick="setLang('en')" id="btn-en" aria-label="Switch to English">
-        <img src="assets/lang/EnButtons3.png" alt="English">
+        <img src="assets/lang/EnButtons3.png" alt="Eng">
     </button>
     <button type="button" onclick="setLang('es')" id="btn-es" aria-label="Cambiar a español">
-        <img src="assets/lang/EsButtons3.png" alt="Español">
+        <img src="assets/lang/EsButtons3.png" alt="Esp">
     </button>
+
 </div>
 
 <header>
     <h1 id="title">Alejandro Ahumada</h1>
     <p id="subtitle">2D Artist | Pixel Art | Unity Game Developer</p>
-</header>
+    </header>
+
+    <a href="assets/cv/Alejandro_Ahumada_CV.pdf" download class="cv-button">
+    Download CV
+</a>
 
 <section>
     <h2 id="projectsTitle">Projects</h2>
@@ -46,6 +51,15 @@
         </div>
 
         <img src="assets/gifs/project2.gif" class="project-gif" alt="Asteroid Energy project animation">
+    </div>
+
+    <div class="card project">
+        <div class="project-text">
+            <h3 id="proj3Title">What da fuq is wrong with my gun</h3>
+            <p id="proj3Desc">Videogame developed for Limited Capacity Game Jam, where I worked as the main 2D artist, creating characters and props, animating them, and also handling character movement programming and Animator setup.</p>
+        </div>
+
+        <img src="assets/gifs/project3.gif" class="project-gif" alt="Asteroid Energy project animation">
     </div>
 
 </section>
@@ -87,6 +101,9 @@ const content = {
         proj1Desc: "Juego desarrollado para la LAGS Game Jam, donde fui artista principal de personajes 2D y props, enfocado en la estética y animación.",
         proj2Title: "Asteroid Energy",
         proj2Desc: "Videojuego desarrollado para la Limited Capacity Game Jam, donde fui artista 2D principal, creando personajes, props, animaciones y trabajando también en programación del personaje y Animator.",
+        proj3Title: "What da fuq is wrong with my gun",
+        proj3Desc: "Videojuego desarrollado para la Wrong Genre Game Jam, donde fui artista 2D principal, creando personajes, props, animaciones y trabajando también en programación del personaje y Animator.",
+        
         aboutTitle: "Sobre mí",
         aboutText: "Soy un artista 2D y desarrollador enfocado en pixel art y animación.",
         contactTitle: "Contacto"
