@@ -1,0 +1,96 @@
+.lang-switch {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    
+}
+
+.lang-switch img {
+    width: 32px;
+    cursor: pointer;
+    image-rendering: pixelated;
+    transition: transform 0.1s;
+}
+
+.lang-switch img:hover {
+    transform: scale(1.3);
+    transition: transform 0.15s ease-out;
+}
+
+.lang-switch img:active {
+    transform: scale(0.8) translateY(2px);
+}
+
+
+
+@keyframes pixelBounce {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+.active-lang {
+    outline: 2px solid #ffffff;
+}
+
+header {
+    padding: 60px 20px;
+    background: #b92222;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000000;
+    color: #ffffff;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: #b92222;
+}
+
+h1 { font-size: 3rem; }
+
+section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.card {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.lang-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.project-text {
+    flex: 1;
+}
+
+.project-gif {
+    width: 220px;
+    image-rendering: pixelated;
+}
