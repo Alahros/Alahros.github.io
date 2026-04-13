@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alejandro | Portfolio</title>
+    <title>Alejandro Ahumada| Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -21,71 +21,94 @@
 
 </div>
 
+<nav class="navbar">
+    <a href="#projects" id="navProjects">Projects</a>
+    <a href="#about" id="navAbout">About</a>
+    <a href="#contact" id="navContact">Contact</a>
+</nav>
+
 <header>
     <h1 id="title">Alejandro Ahumada</h1>
     <p id="subtitle">2D Artist | Pixel Art | Unity Game Developer</p>
     </header>
 
     <a href="assets/cv/Alejandro_Ahumada_CV.pdf" download class="cv-button">
-    Download CV
+    Descargar CV
 </a>
 
-<section>
+<section id="projects">
     <h2 id="projectsTitle">Projects</h2>
 
-    
-    <div class="card project">
-        <div class="project-text">
-            <h3 id="proj1Title">Mi Esmeralda</h3>
-            <p id="proj1Desc">2.5D videogame developed for LAGS Game Jam, where I worked as the main 2D artist, creating characters and props and animating them, with a strong focus on visual aesthetics.</p>
-        </div>
+    <!-- 🎥 MAIN DISPLAY -->
+    <div class="project-viewer">
+        
+        <img id="projectMedia" src="assets/gifs/project1.gif" alt="Project preview">
 
-        <img src="assets/gifs/project1.gif" class="project-gif" alt="Mi Esmeralda project animation">
+        <div class="project-info">
+            <h3 id="projectTitle">Mi Esmeralda</h3>
+            <p id="projectDesc">2.5D videogame developed for LAGS Game Jam, where I worked as the main 2D artist, creating characters and props and animating them, with a strong focus on visual aesthetics. </p>
+        </div>
     </div>
 
-    
-    <div class="card project">
-        <div class="project-text">
-            <h3 id="proj2Title">Asteroid Energy</h3>
-            <p id="proj2Desc">Videogame developed for Limited Capacity Game Jam, where I worked as the main 2D artist, creating characters and props, animating them, and also handling character movement programming and Animator setup.</p>
-        </div>
-
-        <img src="assets/gifs/project2.gif" class="project-gif" alt="Asteroid Energy project animation">
+    <!-- 🎮 NAVIGATION -->
+    <div class="project-nav">
+        <button onclick="setProject(0)">1</button>
+        <button onclick="setProject(1)">2</button>
+        <button onclick="setProject(2)">3</button>
     </div>
-
-    <div class="card project">
-        <div class="project-text">
-            <h3 id="proj3Title">What da fuq is wrong with my gun</h3>
-            <p id="proj3Desc">Videogame developed for Limited Capacity Game Jam, where I worked as the main 2D artist, creating characters and props, animating them, and also handling character movement programming and Animator setup.</p>
-        </div>
-
-        <img src="assets/gifs/project3.gif" class="project-gif" alt="Asteroid Energy project animation">
-    </div>
+</section>
 
 </section>
 
-<section>
+<section id="about">
     <h2 id="aboutTitles">About Me</h2>
     <p id="aboutText">I'm a 2D artist and game developer focused on pixel art and animation.</p>
 </section>
 
-<section>
+<section id="contact">
     <h2 id="contactTitle">Contact</h2>
-    <p>
-        <a href="https://github.com/Alahros">GitHub</a> |
-        <a href="https://www.artstation.com/alahros">ArtStation</a> |
-        <a href="https://alahros.itch.io/">Itch.io</a>
-    </p>
+
+    <div class="contact-links">
+        
+        <a href="https://www.linkedin.com/in/alejandro-ahumada-alahros-unity-developer-pixel-artist/" target="_blank">
+            <img src="assets/icons/linkedin.png" alt="LinkedIn">
+            
+        </a>
+        
+        <a href="https://www.artstation.com/alahros" target="_blank">
+            <img src="assets/icons/artstation.png" alt="ArtStation">
+            
+        </a>
+        
+        <a href="https://alahros.itch.io/" target="_blank">
+            <img src="assets/icons/itch.png" alt="Itch.io">
+                  
+        </a>
+
+        <a href="https://github.com/Alahros" target="_blank">
+            <img src="assets/icons/github.png" alt="GitHub">
+            
+        </a>
+
+    </div>
+
+    
+
+    
 </section>
+
 
 <script>
 const content = {
     en: {
+        navProjects: "Projects",
+        navAbout: "About",
+        navContact: "Contact",
         title: "Alejandro Ahumada",
         subtitle: "2D Artist | Pixel Art | Unity Game Developer",
         projectsTitle: "Projects",
-        proj1Title: "Mi Esmeralda",
-        proj1Desc: "2.5D videogame developed for LAGS Game Jam, where I worked as the main 2D artist, creating characters and props and animating them, with a strong focus on visual aesthetics.",
+        projectTitle1: "Mi Esmeralda",
+        projectDesc1: "2.5D videogame developed for LAGS Game Jam, where I worked as the main 2D artist, creating characters and props and animating them, with a strong focus on visual aesthetics.",
         proj2Title: "Asteroid Energy",
         proj2Desc: "Videogame developed for Limited Capacity Game Jam, where I worked as the main 2D artist, creating characters and props, animating them, and also handling character movement programming and Animator setup.",
         aboutTitle: "About Me",
@@ -94,11 +117,15 @@ const content = {
     },
 
     es: {
+
+        navProjects: "Proyectos",
+        navAbout: "Sobre mí",
+        navContact: "Contacto",
         title: "Alejandro Ahumada",
         subtitle: "Artista 2D | Pixel Art | Desarrollador en Unity",
         projectsTitle: "Proyectos",
-        proj1Title: "Mi Esmeralda",
-        proj1Desc: "Juego desarrollado para la LAGS Game Jam, donde fui artista principal de personajes 2D y props, enfocado en la estética y animación.",
+        projectTitle1: "Mi Esmeralda",
+        projectDesc1: "Juego desarrollado para la LAGS Game Jam, donde fui artista principal de personajes 2D y props, enfocado en la estética y animación.",
         proj2Title: "Asteroid Energy",
         proj2Desc: "Videojuego desarrollado para la Limited Capacity Game Jam, donde fui artista 2D principal, creando personajes, props, animaciones y trabajando también en programación del personaje y Animator.",
         proj3Title: "What da fuq is wrong with my gun",
@@ -114,13 +141,16 @@ function setLang(lang) {
     document.getElementById("title").innerText = content[lang].title;
     document.getElementById("subtitle").innerText = content[lang].subtitle;
     document.getElementById("projectsTitle").innerText = content[lang].projectsTitle;
-    document.getElementById("proj1Title").innerText = content[lang].proj1Title;
-    document.getElementById("proj1Desc").innerText = content[lang].proj1Desc;
+    document.getElementById("projectTitle1").innerText = content[lang].projectTitle1;
+    document.getElementById("projectDesc1").innerText = content[lang].projectDesc1;
     document.getElementById("proj2Title").innerText = content[lang].proj2Title;
     document.getElementById("proj2Desc").innerText = content[lang].proj2Desc;
     document.getElementById("aboutTitle").innerText = content[lang].aboutTitle;
     document.getElementById("aboutText").innerText = content[lang].aboutText;
     document.getElementById("contactTitle").innerText = content[lang].contactTitle;
+    document.getElementById("navProjects").innerText = content[lang].navProjects;
+    document.getElementById("navAbout").innerText = content[lang].navAbout;
+    document.getElementById("navContact").innerText = content[lang].navContact;
 }
 
 setLang('en');
